@@ -11,6 +11,7 @@ const ProductItem = ({ product }) => {
       description: product.description,
       price: product.price,
       title: product.title,
+      totalPrice: product.price,
     };
     dispatch(cartSliceActions.addItem(item));
   };
