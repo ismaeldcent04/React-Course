@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"Lamine Yamal","image":"https://www.fcbarcelona.com/photo-resources/2024/10/13/c73a4770-0bf1-452f-9ebd-b0f8c33412a0/19-Lamine-M.jpg?width=1200&height=750","date":"2025-04-01","description":"Best player in  the world","id":"d5538206-01dc-47c9-8d7f-422159b71ca2"},{"title":"Barcelona","image":"https://www.fcbarcelona.com/photo-resources/2023/05/20/fd8f3ab0-de0a-46f3-b458-889c4678adcf/2022-05-20_FCBvsREIALSOCIETAT_139.JPG?width=1200&height=525","date":"2025-02-28","description":"aa","id":"8a7f4679-3773-4f6e-9128-3566a0ddd617"},{"title":"Best Team ever","image":"https://www.fcbarcelona.com/photo-resources/2023/05/20/fd8f3ab0-de0a-46f3-b458-889c4678adcf/2022-05-20_FCBvsREIALSOCIETAT_139.JPG?width=1200&height=525","date":"2025-03-07","description":"adsfadf","id":"9c95162c-b107-4cd0-b5c3-b3019328a81e"},{"title":"Another example","image":"https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg","date":"2025-03-20","description":"dadfaf","id":"c87a37bc-44c5-4776-a178-288de7728e49"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
