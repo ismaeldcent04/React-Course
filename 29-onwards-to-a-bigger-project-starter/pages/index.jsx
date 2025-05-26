@@ -1,42 +1,34 @@
 import { useEffect, useState } from "react";
 import MeetupList from "../components/meetups/MeetupList";
-
-const DUMMY_MEETUPS = [
-  {
-    id: "m1",
-    title: "A First Meetup",
-    image:
-      "https://www.barcelo.com/guia-turismo/wp-content/uploads/ok-plaza-de-catalunya.jpg",
-    address: "Some Address 5, 12345 Some city",
-    description: "This is a first Meetup",
-  },
-  {
-    id: "m2",
-    title: "A Second Meetup",
-    image:
-      "https://www.barcelo.com/guia-turismo/wp-content/uploads/ok-plaza-de-catalunya.jpg",
-    address: "Some Address 5, 12345 Some city",
-    description: "This is a second Meetup",
-  },
-];
+import { MongoClient } from "mongodb";
 
 export default function HomePage(props) {
   return <MeetupList meetups={props.meetups} />;
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
+  const client = await MongoClient.connect(
+    "mongodb+srv://ismaeldcent:Hulk2604@cluster0.4zfthwe.mongodb.net/meetups?retryWrites=true&w=majority&appName=Cluster0"
+  );
+  const db = client.db();
+
+  const meetupsCollection = db.collection("meetups");
+
+  const meetups = await meetupsCollection.find().toArray();
+
+  client.close();
+
   return {
     props: {
-      meetups: DUMMY_MEETUPS,
+      meetups: meetups.map((meetup) => {
+        return {
+          title: meetup.title,
+          address: meetup.address,
+          image: meetup.image,
+          id: meetup._id.toString(),
+        };
+      }),
     },
+    revalidate: 1,
   };
 }
-
-// export async function getStaticProps() {
-//   return {
-//     props: {
-//       meetups: DUMMY_MEETUPS,
-//     },
-//     revalidate: 10,
-//   };
-// }
