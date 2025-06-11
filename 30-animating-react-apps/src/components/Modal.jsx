@@ -13,7 +13,7 @@ export default function Modal({ title, children, onClose }) {
         }}
         initial="hidden"
         animate="visible"
-        exit="hidden"
+        exit={{ opacity: 0, y: 30 }}
         open
         className="modal">
         <h2>{title}</h2>
